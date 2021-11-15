@@ -6,7 +6,7 @@ Aplicação Spring REST completa: CRUD, JWT e Docker
 FROM openjdk:11
 ARG JAR_FILE=target/*.jar
 COPY ${JAR_FILE} app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+ENTRYPOINT ["java","-Xmx512m","-jar","/app.jar"]
 ```
 
 ###Comando para gerar imagem
@@ -31,7 +31,7 @@ heroku create forum-marcio
 heroku git:remote -a forum-marcio
 ```
 ## Configurar variáveis de ambiente no Heroku
-![img.png](img.png)
+![img_1.png](img_1.png)
 
 ```
 heroku container:push web
