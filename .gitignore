@@ -34,4 +34,3 @@ build/
 
 ### Dados sensíveis ###
 export_dados_sensiveis.txt
-/target/
